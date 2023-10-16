@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		669CD5AE2ADC8F0000E69153 /* FutCreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CD5AD2ADC8F0000E69153 /* FutCreatorApp.swift */; };
+		669CD5B02ADC8F0000E69153 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CD5AF2ADC8F0000E69153 /* CardView.swift */; };
+		669CD5B22ADC8F0200E69153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5B12ADC8F0200E69153 /* Assets.xcassets */; };
+		669CD5B52ADC8F0200E69153 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5B42ADC8F0200E69153 /* Preview Assets.xcassets */; };
+		669CD5BD2ADCADFB00E69153 /* DinPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5BC2ADCADE100E69153 /* DinPro.otf */; };
+		669CD5C32ADCB85400E69153 /* CruyffSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5C12ADCB84C00E69153 /* CruyffSans-Bold.otf */; };
+		669CD5C42ADCB85600E69153 /* CruyffSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5C02ADCB84C00E69153 /* CruyffSans-Light.otf */; };
+		669CD5C52ADCB85800E69153 /* CruyffSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5BF2ADCB84C00E69153 /* CruyffSans-Medium.otf */; };
+		669CD5C62ADCB85A00E69153 /* CruyffSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5C22ADCB84C00E69153 /* CruyffSans-Regular.otf */; };
+		669CD5CA2ADCBCA400E69153 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CD5C92ADCBCA400E69153 /* Home.swift */; };
+		66C74A072ADCE04F0030982F /* modifierAttributesTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */; };
+		66C74A0A2ADDF3D40030982F /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C74A092ADDF3D40030982F /* CardModel.swift */; };
+		66C74A0C2ADDF3EA0030982F /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C74A0B2ADDF3EA0030982F /* CardViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		669CD5AA2ADC8F0000E69153 /* FutCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		669CD5AD2ADC8F0000E69153 /* FutCreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutCreatorApp.swift; sourceTree = "<group>"; };
+		669CD5AF2ADC8F0000E69153 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		669CD5B12ADC8F0200E69153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		669CD5B42ADC8F0200E69153 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		669CD5BC2ADCADE100E69153 /* DinPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DinPro.otf; sourceTree = "<group>"; };
+		669CD5BE2ADCAF7800E69153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669CD5BF2ADCB84C00E69153 /* CruyffSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CruyffSans-Medium.otf"; sourceTree = "<group>"; };
+		669CD5C02ADCB84C00E69153 /* CruyffSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CruyffSans-Light.otf"; sourceTree = "<group>"; };
+		669CD5C12ADCB84C00E69153 /* CruyffSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CruyffSans-Bold.otf"; sourceTree = "<group>"; };
+		669CD5C22ADCB84C00E69153 /* CruyffSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CruyffSans-Regular.otf"; sourceTree = "<group>"; };
+		669CD5C92ADCBCA400E69153 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modifierAttributesTextfield.swift; sourceTree = "<group>"; };
+		66C74A092ADDF3D40030982F /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		66C74A0B2ADDF3EA0030982F /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		669CD5A72ADC8F0000E69153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		669CD5A12ADC8F0000E69153 = {
+			isa = PBXGroup;
+			children = (
+				669CD5AC2ADC8F0000E69153 /* FutCreator */,
+				669CD5AB2ADC8F0000E69153 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		669CD5AB2ADC8F0000E69153 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				669CD5AA2ADC8F0000E69153 /* FutCreator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		669CD5AC2ADC8F0000E69153 /* FutCreator */ = {
+			isa = PBXGroup;
+			children = (
+				669CD5BE2ADCAF7800E69153 /* Info.plist */,
+				669CD5C92ADCBCA400E69153 /* Home.swift */,
+				669CD5CC2ADCBCDD00E69153 /* Components */,
+				669CD5AD2ADC8F0000E69153 /* FutCreatorApp.swift */,
+				669CD5B12ADC8F0200E69153 /* Assets.xcassets */,
+				669CD5B32ADC8F0200E69153 /* Preview Content */,
+				669CD5BB2ADCAD7400E69153 /* fonts */,
+			);
+			path = FutCreator;
+			sourceTree = "<group>";
+		};
+		669CD5B32ADC8F0200E69153 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				669CD5B42ADC8F0200E69153 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		669CD5BB2ADCAD7400E69153 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				669CD5C02ADCB84C00E69153 /* CruyffSans-Light.otf */,
+				669CD5C22ADCB84C00E69153 /* CruyffSans-Regular.otf */,
+				669CD5BF2ADCB84C00E69153 /* CruyffSans-Medium.otf */,
+				669CD5C12ADCB84C00E69153 /* CruyffSans-Bold.otf */,
+				669CD5BC2ADCADE100E69153 /* DinPro.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		669CD5CC2ADCBCDD00E69153 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				66C74A082ADDF3C60030982F /* Card */,
+				66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		66C74A082ADDF3C60030982F /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				66C74A092ADDF3D40030982F /* CardModel.swift */,
+				669CD5AF2ADC8F0000E69153 /* CardView.swift */,
+				66C74A0B2ADDF3EA0030982F /* CardViewModel.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		669CD5A92ADC8F0000E69153 /* FutCreator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 669CD5B82ADC8F0200E69153 /* Build configuration list for PBXNativeTarget "FutCreator" */;
+			buildPhases = (
+				669CD5A62ADC8F0000E69153 /* Sources */,
+				669CD5A72ADC8F0000E69153 /* Frameworks */,
+				669CD5A82ADC8F0000E69153 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FutCreator;
+			productName = FutCreator;
+			productReference = 669CD5AA2ADC8F0000E69153 /* FutCreator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		669CD5A22ADC8F0000E69153 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					669CD5A92ADC8F0000E69153 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 669CD5A52ADC8F0000E69153 /* Build configuration list for PBXProject "FutCreator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 669CD5A12ADC8F0000E69153;
+			productRefGroup = 669CD5AB2ADC8F0000E69153 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				669CD5A92ADC8F0000E69153 /* FutCreator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		669CD5A82ADC8F0000E69153 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669CD5B52ADC8F0200E69153 /* Preview Assets.xcassets in Resources */,
+				669CD5C62ADCB85A00E69153 /* CruyffSans-Regular.otf in Resources */,
+				669CD5C52ADCB85800E69153 /* CruyffSans-Medium.otf in Resources */,
+				669CD5BD2ADCADFB00E69153 /* DinPro.otf in Resources */,
+				669CD5C32ADCB85400E69153 /* CruyffSans-Bold.otf in Resources */,
+				669CD5C42ADCB85600E69153 /* CruyffSans-Light.otf in Resources */,
+				669CD5B22ADC8F0200E69153 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		669CD5A62ADC8F0000E69153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669CD5B02ADC8F0000E69153 /* CardView.swift in Sources */,
+				66C74A072ADCE04F0030982F /* modifierAttributesTextfield.swift in Sources */,
+				66C74A0C2ADDF3EA0030982F /* CardViewModel.swift in Sources */,
+				669CD5CA2ADCBCA400E69153 /* Home.swift in Sources */,
+				669CD5AE2ADC8F0000E69153 /* FutCreatorApp.swift in Sources */,
+				66C74A0A2ADDF3D40030982F /* CardModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		669CD5B62ADC8F0200E69153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		669CD5B72ADC8F0200E69153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		669CD5B92ADC8F0200E69153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FutCreator/Preview Content\"";
+				DEVELOPMENT_TEAM = HKKAM4GN94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FutCreator/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the card";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jose-guerra.FutCreator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		669CD5BA2ADC8F0200E69153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FutCreator/Preview Content\"";
+				DEVELOPMENT_TEAM = HKKAM4GN94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FutCreator/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the card";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jose-guerra.FutCreator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		669CD5A52ADC8F0000E69153 /* Build configuration list for PBXProject "FutCreator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669CD5B62ADC8F0200E69153 /* Debug */,
+				669CD5B72ADC8F0200E69153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		669CD5B82ADC8F0200E69153 /* Build configuration list for PBXNativeTarget "FutCreator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669CD5B92ADC8F0200E69153 /* Debug */,
+				669CD5BA2ADC8F0200E69153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 669CD5A22ADC8F0000E69153 /* Project object */;
+}
