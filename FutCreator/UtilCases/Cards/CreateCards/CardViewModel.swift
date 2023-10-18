@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CardViewModel: ObservableObject {
+class CreateCardViewModel: ObservableObject {
     
     @Published var card: Card
     

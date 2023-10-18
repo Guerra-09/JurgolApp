@@ -1,26 +1,27 @@
 //
-//  ContentView.swift
+//  CardComponent.swift
 //  FutCreator
 //
-//  Created by José Guerra on 15-10-23.
+//  Created by José Guerra on 18-10-23.
 //
 
 import SwiftUI
 
+private class CardComponentViewModel: ObservableObject {
+    
+}
 
-struct CardView: View {
+struct CardComponent: View {
     
-    @ObservedObject var cardViewModel: CardViewModel
-    
-    @State private var overallText: String = "99"
-    @State private var positionText: String = "DC"
-    @State private var nameText: String = "Guerra"
-    @State private var paceText: String = "99"
-    @State private var shootText: String = "99"
-    @State private var passText: String = "99"
-    @State private var dribblingText: String = "99"
-    @State private var defenseText: String = "99"
-    @State private var physicText: String = "99"
+    @State var overallText: String
+    @State var positionText: String
+    @State var nameText: String
+    @State var paceText: String
+    @State var shootText: String
+    @State var passText: String
+    @State var dribblingText: String
+    @State var defenseText: String
+    @State var physicText: String
 
     
     var body: some View {
@@ -93,54 +94,36 @@ struct CardView: View {
                         Group {
                             // Ritmo
                             TextField("", text: $paceText)
-                                .onAppear {
-                                    paceText = "\(cardViewModel.card.pace)"
-                                }
                                 .onTapGesture {
                                     paceText = ""
                                 }
                             
                             //Tiro
                             TextField("", text: $shootText)
-                                .onAppear {
-                                    shootText = "\(cardViewModel.card.shoot)"
-                                }
                                 .onTapGesture {
                                     shootText = ""
                                 }
                         
                             //Pase
                             TextField("", text: $passText)
-                                .onAppear {
-                                    passText = "\(cardViewModel.card.pass)"
-                                }
                                 .onTapGesture {
                                     passText = ""
                                 }
         
                             // Regate
                             TextField("", text: $dribblingText)
-                                .onAppear {
-                                    dribblingText = "\(cardViewModel.card.dribbling)"
-                                }
                                 .onTapGesture {
                                     dribblingText = ""
                                 }
         
                             // Defensa
                             TextField("", text: $defenseText)
-                                .onAppear {
-                                    defenseText = "\(cardViewModel.card.defense)"
-                                }
                                 .onTapGesture {
                                     defenseText = ""
                                 }
         
                             // Physic
                             TextField("", text: $physicText)
-                                .onAppear {
-                                    physicText = "\(cardViewModel.card.physic)"
-                                }
                                 .onTapGesture {
                                     physicText = ""
                                 }
@@ -155,37 +138,16 @@ struct CardView: View {
                     .padding(.top, 240)
                     
                 }
-                .onSubmit {
-                    
-                    print("Updateando")
-
-                    cardViewModel.updateLatestChanges(
-                        overAll: Int(overallText) ?? 0,
-                        position: positionText,
-                        name: nameText,
-                        pace: Int(paceText) ?? 0,
-                        shoot: Int(shootText) ?? 0,
-                        pass: Int(passText) ?? 0,
-                        dribbling: Int(dribblingText) ?? 0,
-                        defense: Int(defenseText) ?? 0,
-                        physic: Int(physicText) ?? 0
-                    )
-                }
- 
-                    
                 
                 }
             .frame(maxWidth: 300, maxHeight: 410)
-            
         }
         .foregroundStyle(Color("fontColor"))
-        .background(.red)
-
         
     }
-        
+    
 }
 
 #Preview {
-    CardView(cardViewModel: CardViewModel())
+    CardComponent(overallText: "90", positionText: "DFC", nameText: "Guerra", paceText: "90", shootText: "90", passText: "90", dribblingText: "90", defenseText: "90", physicText: "90")
 }

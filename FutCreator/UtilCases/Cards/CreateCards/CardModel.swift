@@ -5,7 +5,7 @@
 //  Created by José Guerra on 16-10-23.
 //
 
-struct Card {
+struct Card: Hashable {
     //let id: Int
     var cardType: String
     var overAll: Int
