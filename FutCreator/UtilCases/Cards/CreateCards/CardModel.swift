@@ -5,8 +5,11 @@
 //  Created by José Guerra on 16-10-23.
 //
 
+import Foundation
+
 struct Card: Hashable {
-    //let id: Int
+    
+    var id = UUID().uuidString
     var cardType: String
     var overAll: Int
     var position: String

@@ -11,12 +11,12 @@ import UIKit
 struct Home: View {
     
     var body: some View {
+        
         NavigationStack {
             VStack {
-                
                 TabView {
                     
-                    CardView()
+                    CardsView()
                         .tabItem {
                             Image(systemName: "creditcard")
                                 .frame(width: 20, height: 30)
@@ -29,19 +29,12 @@ struct Home: View {
                             Image(systemName: "sportscourt")
                             Text("Squads")
                         }
-                    
-                }
-                
+                    }
             }
         }
         
     }
-
 }
-
-
-
-
 
 #Preview {
     NavigationStack {

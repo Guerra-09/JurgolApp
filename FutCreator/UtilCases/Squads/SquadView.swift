@@ -18,7 +18,7 @@ struct SquadView: View {
             
             
             // Here goes squads from vm
-            Text("Squad...")
+            Text("There aren't squads to show")
             
         }
         .navigationTitle("Squad creator")

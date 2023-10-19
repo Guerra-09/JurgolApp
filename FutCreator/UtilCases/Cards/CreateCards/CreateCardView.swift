@@ -10,35 +10,32 @@ import UIKit
 
 struct CreateCardView: View {
 
+    //@ObservedObject var vm: CardsViewModel
+    @ObservedObject var parentChild: CardsViewModel
+    @Environment(\.dismiss) var dismiss
+    
     let imageSize: CGSize = CGSize(width: 400, height: 480)
     @State var highresImage = UIImage()
 
+    
     var body: some View {
         NavigationStack {
             VStack {
                 
-                CardComponent(
-                    overallText: "90",
-                    positionText: "MC",
-                    nameText: "Guerra",
-                    paceText: "90",
-                    shootText: "90",
-                    passText: "90",
-                    dribblingText: "90",
-                    defenseText: "90",
-                    physicText: "90")
+                CardComponent(editable: true, overallText: "99", positionText: "", nameText: "AA", paceText: "99", shootText: "99", passText: "99", dribblingText: "99", defenseText: "99", physicText: "99")
             
-                Button {
-                    saveImage()
-                } label: {
+                Button(action: {
+                    parentChild.addCard(card: parentChild.newCard)
+                    print(parentChild.newCard.name)
+                    dismiss()
+                }, label: {
                     Text("Save card")
                         .font(.title)
                         .frame(width: 200, height: 70, alignment: .center)
                         .background(.blue)
                         .foregroundColor(.white)
                         .border(.black)
-                }
-                
+                })
             }
         }
         
@@ -71,9 +68,3 @@ extension View {
 }
 
 
-
-#Preview {
-    NavigationStack {
-        CreateCardView()
-    }
-}

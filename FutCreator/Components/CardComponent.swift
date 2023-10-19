@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-private class CardComponentViewModel: ObservableObject {
-    
-}
-
 struct CardComponent: View {
     
+    @ObservedObject var vm = CardsViewModel()
+    
+    @State var editable: Bool
     @State var overallText: String
     @State var positionText: String
     @State var nameText: String
@@ -42,7 +41,12 @@ struct CardComponent: View {
                     Group {
                         VStack(spacing: -7) {
                             //Overall
-                            TextField("", text: $overallText)
+                            TextField("", text: $overallText, onEditingChanged: { isEditing in
+                                if !isEditing {
+                                    updateCardInViewModel()
+                                }
+                                
+                            })
                                 .font(.custom("CruyffSans-Bold", size: 56))
                                 .onTapGesture {
                                     overallText = ""
@@ -57,6 +61,7 @@ struct CardComponent: View {
                                 }
                             
                         }
+                        //.disabled(editable ? true : false)
                         .frame(width: 85)
                         .multilineTextAlignment(.center)
                         .padding(.trailing, 150)
@@ -76,7 +81,11 @@ struct CardComponent: View {
                             
                             
                             // Name
-                            TextField("", text: $nameText)
+                            TextField("", text: $nameText, onEditingChanged: { isEditing in
+                                if !isEditing {
+                                    updateCardInViewModel()
+                                }
+                            })
                                 .font(.custom("CruyffSans-Medium", size: 30))
                                 .frame(width: 240)
                                 .multilineTextAlignment(.center)
@@ -139,15 +148,35 @@ struct CardComponent: View {
                     
                 }
                 
+                
                 }
+            
             .frame(maxWidth: 300, maxHeight: 410)
+            
+            
         }
+        
+        .disabled(editable ? false : true)
         .foregroundStyle(Color("fontColor"))
         
     }
+    func updateCardInViewModel() {
+        vm.createNewCard(
+            overAll: Int(overallText) ?? 0,
+            position: positionText,
+            name: nameText,
+            pace: Int(paceText) ?? 0,
+            shoot: Int(shootText) ?? 0,
+            pass: Int(passText) ?? 0,
+            dribbling: Int(dribblingText) ?? 0,
+            defense: Int(defenseText) ?? 0,
+            physic: Int(physicText) ?? 0
+        )
+    }
+
     
 }
 
 #Preview {
-    CardComponent(overallText: "90", positionText: "DFC", nameText: "Guerra", paceText: "90", shootText: "90", passText: "90", dribblingText: "90", defenseText: "90", physicText: "90")
+    CardComponent(editable: true, overallText: "90", positionText: "DFC", nameText: "Guerra", paceText: "90", shootText: "90", passText: "90", dribblingText: "90", defenseText: "90", physicText: "90")
 }
