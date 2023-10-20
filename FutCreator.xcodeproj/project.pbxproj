@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663ACAC22AE2337A00C7250C /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663ACAC12AE2337A00C7250C /* EditCardView.swift */; };
 		664B0C402ADF158D005473D5 /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C3F2ADF158D005473D5 /* SquadView.swift */; };
 		664B0C432ADF1DCF005473D5 /* SquadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C422ADF1DCF005473D5 /* SquadViewModel.swift */; };
 		664B0C472AE07A99005473D5 /* CreateSquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C462AE07A99005473D5 /* CreateSquadView.swift */; };
@@ -15,6 +16,7 @@
 		664B0C4E2AE09CF4005473D5 /* CreateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C4D2AE09CF4005473D5 /* CreateCardView.swift */; };
 		664B0C512AE0A1FA005473D5 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C502AE0A1FA005473D5 /* CardsView.swift */; };
 		664B0C532AE0A467005473D5 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C522AE0A467005473D5 /* CardsViewModel.swift */; };
+		6688B58F2AE1D0C200645853 /* CardComponent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6688B58E2AE1D0C200645853 /* CardComponent2.swift */; };
 		669CD5AE2ADC8F0000E69153 /* FutCreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CD5AD2ADC8F0000E69153 /* FutCreatorApp.swift */; };
 		669CD5B22ADC8F0200E69153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5B12ADC8F0200E69153 /* Assets.xcassets */; };
 		669CD5B52ADC8F0200E69153 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5B42ADC8F0200E69153 /* Preview Assets.xcassets */; };
@@ -24,11 +26,12 @@
 		669CD5C52ADCB85800E69153 /* CruyffSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5BF2ADCB84C00E69153 /* CruyffSans-Medium.otf */; };
 		669CD5C62ADCB85A00E69153 /* CruyffSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5C22ADCB84C00E69153 /* CruyffSans-Regular.otf */; };
 		669CD5CA2ADCBCA400E69153 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CD5C92ADCBCA400E69153 /* Home.swift */; };
+		66BFFA532AE2340800A2DCF6 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFFA522AE2340800A2DCF6 /* CardModel.swift */; };
 		66C74A072ADCE04F0030982F /* modifierAttributesTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */; };
-		66C74A0A2ADDF3D40030982F /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C74A092ADDF3D40030982F /* CardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		663ACAC12AE2337A00C7250C /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
 		664B0C3F2ADF158D005473D5 /* SquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
 		664B0C422ADF1DCF005473D5 /* SquadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadViewModel.swift; sourceTree = "<group>"; };
 		664B0C462AE07A99005473D5 /* CreateSquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSquadView.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		664B0C4D2AE09CF4005473D5 /* CreateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCardView.swift; sourceTree = "<group>"; };
 		664B0C502AE0A1FA005473D5 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		664B0C522AE0A467005473D5 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
+		6688B58E2AE1D0C200645853 /* CardComponent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent2.swift; sourceTree = "<group>"; };
 		669CD5AA2ADC8F0000E69153 /* FutCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669CD5AD2ADC8F0000E69153 /* FutCreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutCreatorApp.swift; sourceTree = "<group>"; };
 		669CD5B12ADC8F0200E69153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,8 +52,8 @@
 		669CD5C12ADCB84C00E69153 /* CruyffSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CruyffSans-Bold.otf"; sourceTree = "<group>"; };
 		669CD5C22ADCB84C00E69153 /* CruyffSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CruyffSans-Regular.otf"; sourceTree = "<group>"; };
 		669CD5C92ADCBCA400E69153 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		66BFFA522AE2340800A2DCF6 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modifierAttributesTextfield.swift; sourceTree = "<group>"; };
-		66C74A092ADDF3D40030982F /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardModel.swift; path = CreateCards/CardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +96,13 @@
 			path = Create;
 			sourceTree = "<group>";
 		};
-		664B0C4A2AE09925005473D5 /* CreateCards */ = {
+		664B0C4A2AE09925005473D5 /* CRUD */ = {
 			isa = PBXGroup;
 			children = (
 				664B0C4D2AE09CF4005473D5 /* CreateCardView.swift */,
+				663ACAC12AE2337A00C7250C /* EditCardView.swift */,
 			);
-			path = CreateCards;
+			path = CRUD;
 			sourceTree = "<group>";
 		};
 		669CD5A12ADC8F0000E69153 = {
@@ -155,6 +160,7 @@
 			children = (
 				66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */,
 				664B0C4B2AE0996F005473D5 /* CardComponent.swift */,
+				6688B58E2AE1D0C200645853 /* CardComponent2.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -162,10 +168,10 @@
 		66C74A082ADDF3C60030982F /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				66C74A092ADDF3D40030982F /* CardModel.swift */,
+				66BFFA522AE2340800A2DCF6 /* CardModel.swift */,
 				664B0C502AE0A1FA005473D5 /* CardsView.swift */,
 				664B0C522AE0A467005473D5 /* CardsViewModel.swift */,
-				664B0C4A2AE09925005473D5 /* CreateCards */,
+				664B0C4A2AE09925005473D5 /* CRUD */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -247,11 +253,13 @@
 			files = (
 				664B0C492AE07BFB005473D5 /* CreateSquadModel.swift in Sources */,
 				664B0C402ADF158D005473D5 /* SquadView.swift in Sources */,
+				663ACAC22AE2337A00C7250C /* EditCardView.swift in Sources */,
+				66BFFA532AE2340800A2DCF6 /* CardModel.swift in Sources */,
 				664B0C432ADF1DCF005473D5 /* SquadViewModel.swift in Sources */,
 				66C74A072ADCE04F0030982F /* modifierAttributesTextfield.swift in Sources */,
+				6688B58F2AE1D0C200645853 /* CardComponent2.swift in Sources */,
 				669CD5CA2ADCBCA400E69153 /* Home.swift in Sources */,
 				669CD5AE2ADC8F0000E69153 /* FutCreatorApp.swift in Sources */,
-				66C74A0A2ADDF3D40030982F /* CardModel.swift in Sources */,
 				664B0C532AE0A467005473D5 /* CardsViewModel.swift in Sources */,
 				664B0C4C2AE0996F005473D5 /* CardComponent.swift in Sources */,
 				664B0C4E2AE09CF4005473D5 /* CreateCardView.swift in Sources */,

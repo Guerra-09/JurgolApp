@@ -1,4 +1,12 @@
 //
+//  CardComponent2.swift
+//  FutCreator
+//
+//  Created by José Guerra on 19-10-23.
+//
+
+import Foundation
+//
 //  CardComponent.swift
 //  FutCreator
 //
@@ -7,21 +15,21 @@
 
 import SwiftUI
 
-struct CardComponent: View {
+struct CardComponent2: View {
     
-    //@ObservedObject var vm = CardsViewModel()
-    @ObservedObject var vm: CardsViewModel
+    @ObservedObject var vm = CardsViewModel()
+
+//    var overallText: String
+//    var positionText: String
+//    var nameText: String
+//    var paceText: String
+//    var shootText: String
+//    var passText: String
+//    var dribblingText: String
+//    var defenseText: String
+//    var physicText: String
     
-    @Binding var editable: Bool
-    @Binding var overallText: String
-    @Binding var positionText: String
-    @Binding var nameText: String
-    @Binding var paceText: String
-    @Binding var shootText: String
-    @Binding var passText: String
-    @Binding var dribblingText: String
-    @Binding var defenseText: String
-    @Binding var physicText: String
+    var card: Card
 
     
     var body: some View {
@@ -33,7 +41,7 @@ struct CardComponent: View {
                 .frame(width: 410)
             
             
-            
+
             
             VStack {
                 
@@ -42,19 +50,13 @@ struct CardComponent: View {
                     Group {
                         VStack(spacing: -7) {
                             //Overall
-                            TextField("", text: $overallText)
+                            Text(String(card.overAll))
                                 .font(.custom("CruyffSans-Bold", size: 56))
-                                .onTapGesture {
-                                    overallText = ""
-                                }
                             
 
                             // Position
-                            TextField("", text: $positionText)
+                            Text(card.position)
                                 .font(.custom("CruyffSans-Medium", size: 26))
-                                .onTapGesture {
-                                    positionText = ""
-                                }
                             
                         }
                         //.disabled(editable ? true : false)
@@ -77,13 +79,10 @@ struct CardComponent: View {
                             
                             
                             // Name
-                            TextField("", text: Binding(projectedValue: $nameText))
+                            Text(card.name)
                                 .font(.custom("CruyffSans-Medium", size: 30))
                                 .frame(width: 240)
                                 .multilineTextAlignment(.center)
-                                .onTapGesture {
-                                    nameText = ""
-                                }
                         }
                         .padding(.bottom, 55)
                     }
@@ -94,40 +93,22 @@ struct CardComponent: View {
                         
                         Group {
                             // Ritmo
-                            TextField("", text: $paceText)
-                                .onTapGesture {
-                                    paceText = ""
-                                }
+                            Text("\(card.pace)")
                             
                             //Tiro
-                            TextField("", text: $shootText)
-                                .onTapGesture {
-                                    shootText = ""
-                                }
+                            Text("\(card.shoot)")
                         
                             //Pase
-                            TextField("", text: $passText)
-                                .onTapGesture {
-                                    passText = ""
-                                }
+                            Text("\(card.pass)")
         
                             // Regate
-                            TextField("", text: $dribblingText)
-                                .onTapGesture {
-                                    dribblingText = ""
-                                }
+                            Text("\(card.dribbling)")
         
                             // Defensa
-                            TextField("", text: $defenseText)
-                                .onTapGesture {
-                                    defenseText = ""
-                                }
+                            Text("\(card.defense)")
         
                             // Physic
-                            TextField("", text: $physicText)
-                                .onTapGesture {
-                                    physicText = ""
-                                }
+                            Text("\(card.physic)")
                         }
                         .frame(width: 32)
                         .multilineTextAlignment(.center)
@@ -147,7 +128,6 @@ struct CardComponent: View {
             
             
         }
-        .disabled(editable ? false : true)
         .foregroundStyle(Color("fontColor"))
         
     }
