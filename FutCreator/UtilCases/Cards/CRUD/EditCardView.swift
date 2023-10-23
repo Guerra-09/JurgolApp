@@ -13,6 +13,7 @@ struct EditCard: View {
     @ObservedObject var vm: CardsViewModel
     @Environment(\.dismiss) var dismiss
     
+    @State var idText: String = ""
     @State var editable: Bool = true
     @State var overallText: String = "99"
     @State var positionText: String = "DC"
@@ -28,7 +29,7 @@ struct EditCard: View {
     
     var body: some View {
         VStack {
-            CardComponent(vm: vm, editable: $editable,
+            CardComponent(editable: $editable,
                 overallText: $overallText,
                 positionText: $positionText,
                 nameText: $nameText,
@@ -41,7 +42,7 @@ struct EditCard: View {
             
             Button(action: {
                 
-                let cardEdited = Card(cardType: "gold", overAll: Int(overallText)!, position: positionText, name: nameText, image: "", pace: Int(paceText)!, shoot: Int(shootText)!, pass: Int(passText)!, dribbling: Int(dribblingText)!, defense: Int(defenseText)!, physic: Int(physicText)!)
+                let cardEdited = Card(id: card.id, cardType: "gold", overAll: Int(overallText)!, position: positionText, name: nameText, image: "", pace: Int(paceText)!, shoot: Int(shootText)!, pass: Int(passText)!, dribbling: Int(dribblingText)!, defense: Int(defenseText)!, physic: Int(physicText)!)
                 
                 modifyCard(card: cardEdited)
                 
@@ -55,6 +56,24 @@ struct EditCard: View {
                     .foregroundColor(.white)
                     .border(.black)
             })
+            
+            
+            
+            Button(action: {
+            
+                removeCard(id: card.id)
+                
+                dismiss()
+                
+            }, label: {
+                Text("Remove")
+                    .font(.title)
+                    .frame(width: 200, height: 70, alignment: .center)
+                    .background(.red)
+                    .foregroundColor(.white)
+                    .border(.black)
+            })
+            
         }
         .onAppear {
             
@@ -76,7 +95,9 @@ struct EditCard: View {
 //    }
     
     func modifyCard(card: Card) {
+        
         var editedCard = card
+        
         editedCard.overAll = Int(overallText) ?? 0
         editedCard.position = positionText
         editedCard.name = nameText
@@ -89,8 +110,12 @@ struct EditCard: View {
 
         vm.editCard(editedCard)
         
-        vm.sendChangeNotification()
     }
     
+    func removeCard(id: String) {
+        
+        vm.deleteCard(id)
+    }
+
     
 }

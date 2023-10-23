@@ -17,9 +17,9 @@ class CardsViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
     init() {
-        
+        print("INICIALIZANDO VIEWMODEL")
     }
-    
+
     
     
     func addCard(_ newCard: Card) {
@@ -29,11 +29,20 @@ class CardsViewModel: ObservableObject {
     func editCard(_ editedCard: Card) {
         
         if let index = cards.firstIndex(where: { $0.id == editedCard.id }) {
-            cards[index] = editedCard
+            cards[index] = editedCard // Actualiza la tarjeta existente en lugar de eliminar e insertar
+            objectWillChange.send()
         }
     }
     
-    func sendChangeNotification() {
-            objectWillChange.send()
+    func deleteCard(_ cardToDelete: String) -> Void {
+        
+        if let index = self.cards.firstIndex(where: { $0.id == cardToDelete }) {
+            self.cards.remove(at: index)
+            print("Existe la carta")
+        } else {
+            print("No existe la carta")
         }
+    }
+    
+    
 }

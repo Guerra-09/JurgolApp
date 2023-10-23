@@ -34,7 +34,7 @@ struct CardsView: View {
             
         }
         .onAppear(perform: {
-            print("\(vm.cards.map({ $0.name })) \n")
+            //print("\(vm.cards.map({ $0.name })) \n")
         })
         // Navigation Properties
         .navigationTitle("Preview Cards")

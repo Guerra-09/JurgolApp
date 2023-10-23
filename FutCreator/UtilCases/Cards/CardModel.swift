@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Card: Hashable {
+struct Card: Hashable, Identifiable {
     
-    var id = UUID().uuidString
+    var id: String = UUID().uuidString
     var cardType: String
     var overAll: Int
     var position: String

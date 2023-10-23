@@ -32,7 +32,7 @@ struct CreateCardView: View {
         NavigationStack {
             VStack {
                 
-                CardComponent(vm: vm, editable: $editable, 
+                CardComponent(editable: $editable, 
                               overallText: $overallText,
                               positionText: $positionText,
                               nameText: $nameText,

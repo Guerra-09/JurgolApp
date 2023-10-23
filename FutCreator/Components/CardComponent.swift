@@ -10,7 +10,7 @@ import SwiftUI
 struct CardComponent: View {
     
     //@ObservedObject var vm = CardsViewModel()
-    @ObservedObject var vm: CardsViewModel
+    @EnvironmentObject var vm: CardsViewModel
     
     @Binding var editable: Bool
     @Binding var overallText: String

@@ -10,13 +10,11 @@ import SwiftUI
 @main
 struct FutCreatorApp: App {
     
-    
-    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 //Home()
-                CardsView()
+                ContentView()
             }
         }
     }
