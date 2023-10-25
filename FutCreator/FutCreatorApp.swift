@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct FutCreatorApp: App {
     
+    @StateObject var cardsViewModel = CardsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                //Home()
-                ContentView()
-            }
+            Home()
+                .environmentObject(cardsViewModel)
         }
     }
 }

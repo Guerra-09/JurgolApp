@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SquadView: View {
     
+    @EnvironmentObject var playersCard: CardsViewModel
     @ObservedObject var vm = SquadViewModel()
     
     var body: some View {
@@ -16,19 +17,20 @@ struct SquadView: View {
         
         NavigationStack {
             
+            NavigationLink(destination: NewSquadView()) {
+                Text("ADD")
+                    .font(.title)
+                    .frame(width: 140, height: 60)
+                    .background(.blue)
+                    .foregroundStyle(.white)
+            }
             
             // Here goes squads from vm
             Text("There aren't squads to show")
             
         }
         .navigationTitle("Squad creator")
-        .toolbar(content: {
-            ToolbarItem(placement: .topBarTrailing) {
-                NavigationLink(destination: NewSquadView()) {
-                    Image(systemName: "plus")
-                }
-            }
-        })
+        
         
         
     }
@@ -39,10 +41,11 @@ struct SquadView: View {
 
 
 #Preview {
-    NavigationStack {
+    
         
-        NavigationStack {
-            SquadView()
-        }
+    NavigationStack {
+        SquadView()
+            .environmentObject(CardsViewModel())
     }
+    
 }

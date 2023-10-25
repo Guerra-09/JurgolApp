@@ -10,34 +10,36 @@ import UIKit
 
 struct Home: View {
     
+    @EnvironmentObject var cardsViewModel: CardsViewModel
+    
+    enum Tab {
+        case cards, squads
+    }
+    
+    @State private var selectedTab: Tab = .cards
+    
     var body: some View {
-        
-        NavigationStack {
-            VStack {
-                TabView {
-                    
-                    CardsView()
-                        .tabItem {
-                            Image(systemName: "creditcard")
-                                .frame(width: 20, height: 30)
-                            Text("Cards")
-                        }
-                    
-                    
-                    SquadView()
-                        .tabItem {
-                            Image(systemName: "sportscourt")
-                            Text("Squads")
-                        }
-                    }
+   
+       
+        TabView(selection: $selectedTab, content:  {
+            
+            CardsView().tabItem {
+                Label("Cards", systemImage: "creditcard")
             }
-        }
-        
+            .tag(1)
+            
+            SquadView().tabItem {
+                Label("Squads", systemImage: "sportscourt")
+            }
+            .tag(2)
+        })
+     
+    
+      
     }
 }
 
 #Preview {
-    NavigationStack {
-        Home()
-    }
+    Home()
+        .environmentObject(CardsViewModel())
 }

@@ -9,12 +9,25 @@ import SwiftUI
 
 struct CardsView: View {
     
-    @ObservedObject var vm: CardsViewModel = CardsViewModel()
+    @EnvironmentObject var vm: CardsViewModel 
     
     var body: some View {
         
         NavigationStack {
-            ScrollView() {
+            ScrollView {
+                
+                NavigationLink {
+                    CreateCardView(vm: vm)
+                } label: {
+                    Text("ADD")
+                        .font(.title)
+                        .frame(width: 140, height: 60)
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                }
+                
+                
+                
                 if $vm.cards.isEmpty {
                     Text("No cards created to show")
                     
@@ -23,38 +36,29 @@ struct CardsView: View {
                     ForEach(vm.cards, id: \.self) { item in
                         
                         NavigationLink(destination: EditCard(vm: vm, card: item)) {
-                            CardComponent2(card: item)
+                            CardComponent2(scale: 1.0, card: item)
                         }
                         
-
                     }
+                    
                 }
+                
             }
+            .scrollIndicators(.hidden)
         
             
         }
-        .onAppear(perform: {
-            //print("\(vm.cards.map({ $0.name })) \n")
-        })
-        // Navigation Properties
-        .navigationTitle("Preview Cards")
-        .toolbar(content: {
-            ToolbarItem(placement: .topBarTrailing) {
-                NavigationLink {
-                    CreateCardView(vm: vm)
-                } label: {
-                    Image(systemName: "plus")
-                }
-
-            }
-        })
+        // NavigationStack Properties
+        //.navigationTitle("Preview Cards")
+        
         
     }
 }
 
 #Preview {
-    NavigationStack {
+    NavigationView {
         CardsView()
+            .environmentObject(CardsViewModel())
     }
     
 }

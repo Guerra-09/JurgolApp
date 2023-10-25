@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662F01292AE8A206009C1567 /* SquadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F01282AE8A206009C1567 /* SquadModel.swift */; };
 		663ACAC22AE2337A00C7250C /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663ACAC12AE2337A00C7250C /* EditCardView.swift */; };
 		664B0C402ADF158D005473D5 /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C3F2ADF158D005473D5 /* SquadView.swift */; };
 		664B0C432ADF1DCF005473D5 /* SquadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C422ADF1DCF005473D5 /* SquadViewModel.swift */; };
@@ -16,7 +17,6 @@
 		664B0C4E2AE09CF4005473D5 /* CreateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C4D2AE09CF4005473D5 /* CreateCardView.swift */; };
 		664B0C512AE0A1FA005473D5 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C502AE0A1FA005473D5 /* CardsView.swift */; };
 		664B0C532AE0A467005473D5 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B0C522AE0A467005473D5 /* CardsViewModel.swift */; };
-		6655BC3A2AE5B0AE009A3DCC /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6655BC392AE5B0AE009A3DCC /* Canvas.swift */; };
 		6688B58F2AE1D0C200645853 /* CardComponent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6688B58E2AE1D0C200645853 /* CardComponent2.swift */; };
 		669CD5AE2ADC8F0000E69153 /* FutCreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CD5AD2ADC8F0000E69153 /* FutCreatorApp.swift */; };
 		669CD5B22ADC8F0200E69153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669CD5B12ADC8F0200E69153 /* Assets.xcassets */; };
@@ -32,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662F01282AE8A206009C1567 /* SquadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadModel.swift; sourceTree = "<group>"; };
 		663ACAC12AE2337A00C7250C /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
 		664B0C3F2ADF158D005473D5 /* SquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
 		664B0C422ADF1DCF005473D5 /* SquadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadViewModel.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		664B0C4D2AE09CF4005473D5 /* CreateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCardView.swift; sourceTree = "<group>"; };
 		664B0C502AE0A1FA005473D5 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		664B0C522AE0A467005473D5 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
-		6655BC392AE5B0AE009A3DCC /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		6688B58E2AE1D0C200645853 /* CardComponent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent2.swift; sourceTree = "<group>"; };
 		669CD5AA2ADC8F0000E69153 /* FutCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669CD5AD2ADC8F0000E69153 /* FutCreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutCreatorApp.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		664B0C412ADF1591005473D5 /* Squads */ = {
 			isa = PBXGroup;
 			children = (
-				6655BC392AE5B0AE009A3DCC /* Canvas.swift */,
+				662F01282AE8A206009C1567 /* SquadModel.swift */,
 				664B0C3F2ADF158D005473D5 /* SquadView.swift */,
 				664B0C422ADF1DCF005473D5 /* SquadViewModel.swift */,
 				664B0C452AE07A7D005473D5 /* Create */,
@@ -256,6 +256,7 @@
 			files = (
 				664B0C492AE07BFB005473D5 /* CreateSquadModel.swift in Sources */,
 				664B0C402ADF158D005473D5 /* SquadView.swift in Sources */,
+				662F01292AE8A206009C1567 /* SquadModel.swift in Sources */,
 				663ACAC22AE2337A00C7250C /* EditCardView.swift in Sources */,
 				66BFFA532AE2340800A2DCF6 /* CardModel.swift in Sources */,
 				664B0C432ADF1DCF005473D5 /* SquadViewModel.swift in Sources */,
@@ -268,7 +269,6 @@
 				664B0C4E2AE09CF4005473D5 /* CreateCardView.swift in Sources */,
 				664B0C512AE0A1FA005473D5 /* CardsView.swift in Sources */,
 				664B0C472AE07A99005473D5 /* CreateSquadView.swift in Sources */,
-				6655BC3A2AE5B0AE009A3DCC /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,12 +18,18 @@ class CardsViewModel: ObservableObject {
     
     init() {
         print("INICIALIZANDO VIEWMODEL")
+        testData()
     }
-
+    
+    func testData() {
+        cards.append(contentsOf: [Card(cardType: "gold", overAll: 99, position: "DC", name: "Guerra", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99), Card(cardType: "gold", overAll: 99, position: "DC", name: "Baljeet", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99)])
+    }
     
     
     func addCard(_ newCard: Card) {
         cards.append(newCard)
+        print("Carta agregada")
+        print("nueva lista: \(cards.map({ $0.name }))")
     }
     
     func editCard(_ editedCard: Card) {

@@ -10,15 +10,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>0</string>
+					<string>14</string>
 					<key>EndingLineNumber</key>
-					<string>21</string>
+					<string>8</string>
 					<key>StartingColumnNumber</key>
-					<string>0</string>
+					<string>14</string>
 					<key>StartingLineNumber</key>
-					<string>20</string>
+					<string>8</string>
 					<key>Timestamp</key>
-					<string>719695941.401785</string>
+					<string>719889230.3295161</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,16 +34,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>struct Squad: Hashable, Identifiable {
-</string>
+				<string></string>
 				<key>leading</key>
 				<string>
-
-</string>
+import Foundation
+import SwiftUI</string>
 				<key>trailing</key>
-				<string>    let id: String = UUID().uuidString
-    let name: String
-    let numberOfPlayers: Int
+				<string>
+
+struct CardHolder: Hashable {
 </string>
 			</dict>
 			<key>type</key>
@@ -55,15 +54,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>0</string>
+					<string>14</string>
 					<key>EndingLineNumber</key>
-					<string>21</string>
+					<string>8</string>
 					<key>StartingColumnNumber</key>
-					<string>0</string>
+					<string>14</string>
 					<key>StartingLineNumber</key>
-					<string>20</string>
+					<string>8</string>
 					<key>Timestamp</key>
-					<string>719695941.401817</string>
+					<string>719889230.330475</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -79,16 +78,15 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>struct Squad: Hashable, Identifiable {
-</string>
+				<string></string>
 				<key>leading</key>
 				<string>
-
-</string>
+import Foundation
+import SwiftUI</string>
 				<key>trailing</key>
-				<string>    let id: String = UUID().uuidString
-    let name: String
-    let numberOfPlayers: Int
+				<string>
+
+struct CardHolder: Hashable {
 </string>
 			</dict>
 			<key>type</key>

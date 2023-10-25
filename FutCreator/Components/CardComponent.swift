@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CardComponent: View {
     
-    //@ObservedObject var vm = CardsViewModel()
     @EnvironmentObject var vm: CardsViewModel
     
     @Binding var editable: Bool
@@ -152,3 +151,5 @@ struct CardComponent: View {
         
     }
 }
+
+
