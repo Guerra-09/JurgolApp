@@ -22,7 +22,14 @@ class CardsViewModel: ObservableObject {
     }
     
     func testData() {
-        cards.append(contentsOf: [Card(cardType: "gold", overAll: 99, position: "DC", name: "Guerra", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99), Card(cardType: "gold", overAll: 99, position: "DC", name: "Baljeet", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99)])
+        cards.append(contentsOf: [
+            Card(cardType: "gold", overAll: 99, position: "DC", name: "Guerra", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99),
+            Card(cardType: "gold", overAll: 99, position: "DC", name: "Baljeet", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99),
+            Card(cardType: "gold", overAll: 99, position: "DC", name: "Lope", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99),
+            Card(cardType: "gold", overAll: 99, position: "DC", name: "phillipe", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99),
+            Card(cardType: "gold", overAll: 99, position: "DC", name: "pancho", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99),
+            Card(cardType: "gold", overAll: 99, position: "DC", name: "pato", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99),
+            Card(cardType: "gold", overAll: 99, position: "DC", name: "mati", image: "", pace: 99, shoot: 99, pass: 99, dribbling: 99, defense: 99, physic: 99)])
     }
     
     

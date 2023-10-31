@@ -26,12 +26,12 @@ struct Home: View {
             CardsView().tabItem {
                 Label("Cards", systemImage: "creditcard")
             }
-            .tag(1)
+            .tag(Tab.cards)
             
             SquadView().tabItem {
                 Label("Squads", systemImage: "sportscourt")
             }
-            .tag(2)
+            .tag(Tab.squads)
         })
      
     

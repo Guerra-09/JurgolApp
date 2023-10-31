@@ -8,79 +8,127 @@
 import Foundation
 import SwiftUI
 
-class NewSquadViewModel: ObservableObject {
-    
-    @Published var cardHolders = [CardHolder]()
-    
-    init() {
-        createFixedPositions()
-    }
-    
-    func createFixedPositions() -> () {
-        cardHolders.append(contentsOf: [
-            CardHolder(card: nil, frame: 90, positionX: 200, positionY: 430),
-            CardHolder(card: nil, frame: 90, positionX: 100, positionY: 350),
-            CardHolder(card: 
-                        Card(cardType: "gold", overAll: 90, position: "DFC", name: "Guerra", image: "", pace: 85, shoot: 72, pass: 81, dribbling: 79, defense: 87, physic: 80), frame: 90, positionX: 300, positionY: 350)])
-    }
-    
-}
 
 struct NewSquadView: View {
     
     @EnvironmentObject var playersViewModel: CardsViewModel
     @ObservedObject var vm = SquadViewModel()
     
-
     
-    @State private var sheet: Bool = false
+    var numberOfPlayers = [5, 7, 8, 11]
+    @State var playersSelected = 7
     
     var body: some View {
         VStack {
-            ZStack {
-                
-                Image("squadEmpty")
-                               .resizable()
-                               .frame(width: 395, height: 500)
-                               .background(.red)
-                               //.zIndex(1)
-                
-                ForEach($vm.squads) { squad in
-                        
-                    
-                    
-                            
-                    }
-                    
-
+            
+            Picker("Selecciona cuantos jugadores habran en la plantilla", selection: $playersSelected) {
+                ForEach(numberOfPlayers, id: \.self) { value in
+                    Text("\(value)")
+                }
             }
-        
+            
+            NavigationLink(destination: SquadPlayersView(numberOfPlayers: playersSelected)) {
+                Text("Go to create players")
+            }
         }
-        .sheet(isPresented: $sheet, content: {
-            AddPlayerToSquadView()
-        })
         
 
     }
 }
 
 
+// A view to add players to the squad
+struct SquadPlayersView: View {
+    
+    var numberOfPlayers: Int
+    
+    @State var imageSize: CGFloat = 100
+    
+    @State var sheet = false
+    @EnvironmentObject var playersViewModel: CardsViewModel
+    @ObservedObject var squadvm: NewSquadViewModel = NewSquadViewModel()
+    @Environment(\.dismiss) var dismiss
 
+
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ZStack {
+                    Image("squadEmpty")
+                        .resizable()
+                        .scaledToFit()
+                        
+                    ForEach(squadvm.cardHolders, id: \.self) { value in
+                        if value.card != nil {
+                            CardComponent2(scale: 0.34, card: value.card!)
+                                .position(x: value.positionX, y: value.positionY - 85)
+                                .onTapGesture {
+                                    sheet.toggle()
+                                    squadvm.selectedCardHolder(cardHolder: value)
+                                    print(value.card?.name ?? "")
+                                }
+                            
+                        } else {
+                            Image("emptyCard")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: value.frame)
+                                .position(x: value.positionX, y: value.positionY - 85)
+                                .onTapGesture {
+                                    sheet.toggle()
+                                    squadvm.selectedCardHolder(cardHolder: value)
+                                    
+                                }
+                        }
+                        
+                    }
+                }
+                Button(action: {
+                    
+                    dismiss()
+                    
+                }, label: {
+                    Text("Guardar plantilla")
+                        .frame(width: 180, height: 40)
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        
+                })
+                .padding()
+                
+                
+            }
+        }
+        .sheet(isPresented: $sheet, content: {
+            AddPlayerToSquadView(vm: squadvm)
+        })
+
+    }
+}
+
+
+
+// A view to select players to get into the squad
 struct AddPlayerToSquadView: View {
     
     @EnvironmentObject var players: CardsViewModel
+    @ObservedObject var vm: NewSquadViewModel
+    @Environment(\.dismiss) var dismiss
+    
+    
     
     var body: some View {
-        VStack {
+        ScrollView {
             
             if players.cards.isEmpty {
                 Text("There arent players registered to select")
                 
             } else {
                 ForEach(players.cards) { player in
-                        CardComponent2(scale: 0.6, card: player)
+                        CardComponent2(scale: 0.7, card: player)
                             .onTapGesture {
-                                print(player.name) 
+                                vm.addPlayer(newCard: player)
+                                dismiss()
                             }
                     }
             }
@@ -88,14 +136,26 @@ struct AddPlayerToSquadView: View {
             
         }
     }
+    
+    // Hide cards already in squad
+    func hideSelectedCards() -> Void {}
+    
 }
+
+
+
+
+
 
 
 
 #Preview {
     NavigationStack {
-        NewSquadView()
+        //NewSquadView()
         //AddPlayerToSquadView()
+            //.environmentObject(CardsViewModel())
+        
+        SquadPlayersView(numberOfPlayers: 7)
             .environmentObject(CardsViewModel())
     }
 }

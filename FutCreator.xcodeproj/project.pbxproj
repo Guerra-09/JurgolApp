@@ -29,6 +29,7 @@
 		669CD5CA2ADCBCA400E69153 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CD5C92ADCBCA400E69153 /* Home.swift */; };
 		66BFFA532AE2340800A2DCF6 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFFA522AE2340800A2DCF6 /* CardModel.swift */; };
 		66C74A072ADCE04F0030982F /* modifierAttributesTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */; };
+		66CD92CC2AF14FEB00AE4DBE /* CreateSquadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD92CB2AF14FEB00AE4DBE /* CreateSquadViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		669CD5C92ADCBCA400E69153 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		66BFFA522AE2340800A2DCF6 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		66C74A062ADCE04F0030982F /* modifierAttributesTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modifierAttributesTextfield.swift; sourceTree = "<group>"; };
+		66CD92CB2AF14FEB00AE4DBE /* CreateSquadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSquadViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				664B0C482AE07BFB005473D5 /* CreateSquadModel.swift */,
 				664B0C462AE07A99005473D5 /* CreateSquadView.swift */,
+				66CD92CB2AF14FEB00AE4DBE /* CreateSquadViewModel.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				664B0C492AE07BFB005473D5 /* CreateSquadModel.swift in Sources */,
 				664B0C402ADF158D005473D5 /* SquadView.swift in Sources */,
 				662F01292AE8A206009C1567 /* SquadModel.swift in Sources */,
+				66CD92CC2AF14FEB00AE4DBE /* CreateSquadViewModel.swift in Sources */,
 				663ACAC22AE2337A00C7250C /* EditCardView.swift in Sources */,
 				66BFFA532AE2340800A2DCF6 /* CardModel.swift in Sources */,
 				664B0C432ADF1DCF005473D5 /* SquadViewModel.swift in Sources */,
