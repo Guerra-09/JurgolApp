@@ -14,3 +14,14 @@ struct Squad: Hashable, Identifiable {
     let players: [Card]
     let formation: CardHolder
 }
+
+
+struct CardHolder: Hashable {
+    
+    let id = UUID().uuidString
+    var card: Card?
+    let frame: CGFloat
+    let positionX: CGFloat
+    let positionY: CGFloat
+    
+}
